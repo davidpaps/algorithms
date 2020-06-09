@@ -4,7 +4,9 @@ This is my learnings from my quest to understand algorithms. It serves as a guid
 
 ---
 
-## Key
+## Concepts
+
+Here a few key concepts you will see coming up in the following algorithm examples:
 
 ### Logarithms
 
@@ -32,6 +34,8 @@ n = Number of operations
 
 <img src='images/comparison.png'>
 
+---
+
 ## Binary Search
 
 - Its input is a sorted list of elements. If an element you’re looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null. Binary search first accesses the middle element of the sorted list and therefore elimintes half of the numbers straight away. This is then repeated, it searches for the midde number and then eliminates half of the remaining numbers every time.
@@ -42,4 +46,16 @@ n = Number of operations
 
 - Binary Search runs in Logarithmic time (**_O(log n)_**), as opposed to Simple Searching running in Linear Time (**_O(n)_**).
 
-- See the [Binary Search](binary_search.py) file for a working example of the Binary Code algorithm written in Python.
+- See the [Binary Search](binary_search.py) file for a working example of the Binary Search algorithm, written in Python.
+
+---
+
+## Sort
+
+### Selection Sort
+
+- This algorithm goes through a list, searches for the smallest/largest element, and adds that element to a new list. It then repeats to find the next element in order. It keeps doing this until we end up with an ordered list.
+
+- Each element in the initial list has to be searched through, this takes **_O(n)_**. You then have to repeat this **_n x n_** times as you keep going through the original list. This therefore has a Big O notation of **_O(n<sup>2</sup>)_**.
+
+- See the [Selection Sort](selection_sort.py) file for a working example of the Selection Sort algorithm, written in Python.
