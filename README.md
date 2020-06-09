@@ -14,7 +14,23 @@ Logs are the flip of exponentials:
 - 10<sup>3</sup> = 1000 => log<sub>10</sub> 1000 = 3
 - 10<sup>4</sup> = 10000 => log<sub>10</sub> 10000 = 4
 
----
+### Big O Notation
+
+Big O gives a worst case scenario run time. of an algorithm, it tells us how fast an algorithm is, and how the running time is affected if the list size is changed. Big O doesn’t tell you the speed in seconds. Big O notation lets you compare the number of operations, it tells you how fast the algorithm grows.
+
+`O(n)`
+O = 'Big O'
+n = Number of operations
+
+**Example:**
+
+- O(log n) _Example:_ Binary search.
+- O(n) _Example:_ Simple search.
+- O(n \* log n) _Example:_ Quicksort.
+- O(n<sup>2</sup>) _Example:_ Selection sort.
+- O(n!) _Example:_ A really slow algorithm.
+
+<img src='images/comparison.png'>
 
 ## Binary Search
 
@@ -22,4 +38,8 @@ Logs are the flip of exponentials:
 
 - Binary search takes **_log<sub>2</sub> n_**.
 
-- If you were 'Simple Searching' (Starting at the first element and searching the next one until the desired element is found or the end is reached) every element of a list of 8 numbers, therefore it's logarithm would be log n in the worst case. For Binary Search, a the worst case you would have to check for would be **_log n_**. For a list of 8 elements **_log 8 == 3_** because 2<sup>3</sup> == 8, sor for a list of 8 numbers, 3 numbers would have to be checked at most.
+- If you were 'Simple Searching' (Starting at the first element and searching the next one until the desired element is found or the end is reached) every element of a list of 8 numbers, therefore it's logarithm would be log n in the worst case. For Binary Search, the worst case you would have to check for would be **_log n_**. For a list of 8 elements **_log 8 == 3_** because 2<sup>3</sup> == 8. Therefor for a list of 8 numbers, 3 numbers would have to be checked at most.
+
+- Binary Search runs in Logarithmic time (**_O(log n)_**), as opposed to Simple Searching running in Linear Time (**_O(n)_**).
+
+- See the [Binary Search](binary_search.py) file for a working example of the Binary Code algorithm written in Python.
