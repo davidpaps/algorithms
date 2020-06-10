@@ -4,6 +4,16 @@ This is my notes from my quest to understand algorithms. It serves as a guide an
 
 ---
 
+## How to Run
+
+Clone this repo. Follow this readme along with each code example in its name file. To run the code in the command line, from the [Algorithms](algorithms) directy type in the command line:
+
+```
+python file_name.py
+```
+
+---
+
 ## Concepts
 
 Here a few key concepts you will see coming up in the following algorithm examples:
@@ -41,20 +51,6 @@ n = Number of operations
 - O(n!) _Example:_ A really slow algorithm.
 
 <img src='images/comparison.png'>
-
----
-
-## Binary Search
-
-- Its input is a sorted list of elements. If an element you’re looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null. Binary search first accesses the middle element of the sorted list and therefore elimintes half of the numbers straight away. This is then repeated, it searches for the midde number and then eliminates half of the remaining numbers every time.
-
-- Binary search takes **_log<sub>2</sub> n_**.
-
-- If you were 'Simple Searching' (Starting at the first element and searching the next one until the desired element is found or the end is reached) every element of a list of 8 numbers, therefore it's logarithm would be log n in the worst case. For Binary Search, the worst case you would have to check for would be **_log n_**. For a list of 8 elements **_log 8 == 3_** because 2<sup>3</sup> == 8. Therefor for a list of 8 numbers, 3 numbers would have to be checked at most.
-
-- Binary Search runs in Logarithmic time (**_O(log n)_**), as opposed to Simple Searching running in Linear Time (**_O(n)_**).
-
-- See the [Binary Search](binary_search.py) file for a working example of the Binary Search algorithm, written in Python.
 
 ---
 
@@ -99,6 +95,48 @@ n = Number of operations
 - The load factor is number of items in a hash table / the total number of slots. Therefore you want yout load factor to be < 1, otherwise you will want to `Resize` and increase the capacity of the array that is used for storage in the hash table. A good rule of thumb is to resize once the hash table has a load factor of < 0.7.
 
 - A good hash function is one that distributes values evenly in an array, rather than in consecutive slots.
+
+---
+
+## Search
+
+### Binary Search
+
+- Its input is a sorted list of elements. If an element you’re looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null. Binary search first accesses the middle element of the sorted list and therefore elimintes half of the numbers straight away. This is then repeated, it searches for the midde number and then eliminates half of the remaining numbers every time.
+
+- Binary search takes **_log<sub>2</sub> n_**.
+
+- If you were 'Simple Searching' (Starting at the first element and searching the next one until the desired element is found or the end is reached) every element of a list of 8 numbers, therefore it's logarithm would be log n in the worst case. For Binary Search, the worst case you would have to check for would be **_log n_**. For a list of 8 elements **_log 8 == 3_** because 2<sup>3</sup> == 8. Therefor for a list of 8 numbers, 3 numbers would have to be checked at most.
+
+- Binary Search runs in Logarithmic time (**_O(log n)_**), as opposed to Simple Searching running in Linear Time (**_O(n)_**).
+
+- See the [Binary Search](binary_search.py) file for a working example of the Binary Search algorithm, written in Python.
+
+### Breadth-First Search (BFS)
+
+- BFS allows you to find the shortest distance between two things. BFS is used to solve `Shortest Path` problems, this could be shortest route on public transport, it also could be the shrtest number of moves to win in a game of chess.
+
+- In order to solve shortest path problems, the problem itself is modeled as a `Graph`. Graphs contain `Nodes` that are connected together by `Edges`.
+
+<img src='images/graph.png'>
+
+- Directly connected nodes (via edges) are referred to as `Neighbours`. BFS is different to binary search as it runs on graphs and answers: 1) Is there a path from node A - B? and 2) What is the shortest path between node A and B.
+
+- BFS first searches 'first degree' neighbours as this is more efficient, then it searches 'second degree' neighbours and so on. It will create lists to search, first the nearest neighbours (perhaps connected by one edge), and then a second list of all nodes that are neighbours to the starting nodes neighbours.
+
+- Nodes are searched in the order they are added, therefore the data structure is called a `Queue`. A queue is known as a `FIFO` data structure (First In First Out) The first node added is frnt of the queue to be searched and so on. A queue can either `Enqueue` (add an item to the queue aka `Push`) or `Dequeue` (take an item off the queue aka `Pop`).
+
+- See the [Breadth First Search](breadth_first_search.py) file for examples of implementing graphs in Python using hash tables.
+
+- Graphs can be `Directed` or `Undirected`. A directed graph is where edges run from one node to another node in only 1 direction (with an arrow for the direction). So the node A pointing to a node B will have B as its neighbour, but Node B wil have no neighbours. An undirected graph will have a line edge between two nodes, and they will both be neighbours of eachother. If all edges in a graph point away from the original node then this is known as a `Tree`.
+
+- You can also make an ordered list out of a graph. If a trees node A depends on node B, then node A shows up later in the list. This is called `Topological Sort`, and it’s a way to make an ordered list out of a graph.
+
+<img src='images/topological.png'>
+
+- See the [Breadth First Search](breadth_first_search.py) file for a working example of the BFS algorithm, written in Python.
+
+- BFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes) and E for Edges)
 
 ---
 
