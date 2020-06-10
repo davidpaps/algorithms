@@ -16,6 +16,14 @@ Logs are the flip of exponentials:
 - 10<sup>3</sup> = 1000 => log<sub>10</sub> 1000 = 3
 - 10<sup>4</sup> = 10000 => log<sub>10</sub> 10000 = 4
 
+### Recursion
+
+Recursion is where a function calls itself inside it's function. Every recursive function has 2 parts, the `Base Case` and the `Recursive Case`. The recursive case is when the function calls itself, the base case is when ths function does not call itself again. This is important as to not cause an infinite loop. Recursion uses the `call stack` to save the variables for multiple functions in memory, it only does one of two things - adds a function call or removes a function call from the stack. A recursive call with the same variable cannot access another variable in the call stack. Using the stack is convenient, however it can use lots of memory as your computer is saving information for many function calls.
+
+### Divide and Conquer
+
+An algorithm design based on multi-branched recursion. It works by recursivly breaking down a problem into two or more sub problems of the same type. You would figure out a simple case to be the base case of the algorithm, and then figure out how to reduce your problem and get to the base case.
+
 ### Big O Notation
 
 Big O gives a worst case scenario run time. of an algorithm, it tells us how fast an algorithm is, and how the running time is affected if the list size is changed. Big O doesn’t tell you the speed in seconds. Big O notation lets you compare the number of operations, it tells you how fast the algorithm grows.
@@ -59,3 +67,7 @@ n = Number of operations
 - Each element in the initial list has to be searched through, this takes **_O(n)_**. You then have to repeat this **_n x n_** times as you keep going through the original list. This therefore has a Big O notation of **_O(n<sup>2</sup>)_**.
 
 - See the [Selection Sort](selection_sort.py) file for a working example of the Selection Sort algorithm, written in Python.
+
+### Quicksort
+
+-
