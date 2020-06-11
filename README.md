@@ -12,6 +12,12 @@ Clone this repo. Follow this readme along with each code example in its name fil
 python python/file_name.py
 ```
 
+I have also included some example questions from [Leet Code]() and [Hacker Rank]() that I felt are good for testing your knowledge. These are in the [Example Questions]() directory, to run my examples, navigate to the questions directory and in the command line type in:
+
+```
+node file_name.js
+```
+
 ---
 
 ## Concepts
