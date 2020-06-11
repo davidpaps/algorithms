@@ -1,6 +1,6 @@
-# Algorithms
+# Algorithms & Data Structures
 
-This is my notes from my quest to understand algorithms. It serves as a guide and resource to the core concepts of algorithms, and some of the most commonly used.
+This are my notes from my quest to understand algorithms and data structures. It serves as a guide and resource to the core concepts of algorithms, when to use them, and some of the most commonly used.
 
 ---
 
@@ -9,7 +9,7 @@ This is my notes from my quest to understand algorithms. It serves as a guide an
 Clone this repo. Follow this readme along with each code example in its name file. To run the code in the command line, from the [Algorithms](algorithms) directy type in the command line:
 
 ```
-python file_name.py
+python python/file_name.py
 ```
 
 ---
@@ -54,35 +54,15 @@ n = Number of operations
 
 ---
 
-## Sort
-
-### Selection Sort
-
-- This algorithm goes through a list, searches for the smallest/largest element, and adds that element to a new list. It then repeats to find the next element in order. It keeps doing this until we end up with an ordered list.
-
-- Each element in the initial list has to be searched through, this takes **_O(n)_**. You then have to repeat this **_n x n_** times as you keep going through the original list. This therefore has a Big O notation of **_O(n<sup>2</sup>)_**.
-
-- See the [Selection Sort](selection_sort.py) file for a working example of the Selection Sort algorithm, written in Python.
-
-### Quicksort
-
-- Quicksort uses the _Divide and Conquer_ strategy, and is commonly used as the in built sort function in many programmin languages. Quicksort involves selecting a `pivot` from a given list. The pivot is used to compare every other element in the array (> or < than the pivot). This process is called `Partitioning`. Then _recursion_ is used to continue the same process on the two sub arrays that were created (> and < the pivot) until the list is sorted. The sorted list will be the product of the < array Quicksort + pivot + > array Quicksort.
-
-- Quicksort has an average Big O notation of **_O(n log n)_** (it has a worst case Big O of **_O(n<sup>2</sup>)_**). Quicksort however has a smaller constant time that pther comparable **_O(n log n)_** sorting algorithms (such as _Merge Sort_) therefore it hits it's average case far more than it's worst case. The performance of Quicksort depends heavily on the pivot used.
-
-- See the [Quicksort](quicksort.py) file for a working example of the Binary Search algorithm, written in Python.
-
----
-
 ## Hash Tables
 
 - Has tables are a very fast and efficient data structure for storing, reading and inserting data. A hash table uses a `Hash Function` to compute a string into an index of an array, where the value will be stored in. The hash function will map a string to the same index every time, therefore it is very quick to read the value of what you are asking for.
 
 - A hash table has keys and values. The keys are the strings and the value is stored associated to that key. A hash table maps keys to values, therefore it is important for hash functions to consistently return the same output for the same input.
 
-- See the [Hash Table](hash_table.py) file for an example of creating and using a hash table, written in Python.
+- See the [Hash Table](python/hash_table.py) file for an example of creating and using a hash table, written in Python.
 
-- Hash tables are used for reading the values on a huge scale as they are instant in retrieving the information. You can also use the `.get` function in python to get the value of a key if it exists in the hash table, if not it will return the `None` value. The `guest_list` example in the [Hash Table](hash_table.py) file shows how fast it is to check if an entry exists in a hash table (duplicates), rathe rthan searching through the entire list first.
+- Hash tables are used for reading the values on a huge scale as they are instant in retrieving the information. You can also use the `.get` function in python to get the value of a key if it exists in the hash table, if not it will return the `None` value. The `guest_list` example in the [Hash Table](python/hash_table.py) file shows how fast it is to check if an entry exists in a hash table (duplicates), rathe rthan searching through the entire list first.
 
 - Has tables are used in web pages through `Caching`. Caching is when a website remembers stores information and pages you have visited to help with perfomance. When you visit a page, it first checks weather or not the webpage is stored in a hash. If it does, it retrieves the data from the hash. If not the server boots up and serves the page. This can all happen very quickly and helps use the server ONLY if the data does not already exist in the hash table.
 
@@ -98,6 +78,26 @@ n = Number of operations
 
 ---
 
+## Sort
+
+### Selection Sort
+
+- This algorithm goes through a list, searches for the smallest/largest element, and adds that element to a new list. It then repeats to find the next element in order. It keeps doing this until we end up with an ordered list.
+
+- Each element in the initial list has to be searched through, this takes **_O(n)_**. You then have to repeat this **_n x n_** times as you keep going through the original list. This therefore has a Big O notation of **_O(n<sup>2</sup>)_**.
+
+- See the [Selection Sort](python/selection_sort.py) file for a working example of the Selection Sort algorithm, written in Python.
+
+### Quicksort
+
+- Quicksort uses the _Divide and Conquer_ strategy, and is commonly used as the in built sort function in many programmin languages. Quicksort involves selecting a `pivot` from a given list. The pivot is used to compare every other element in the array (> or < than the pivot). This process is called `Partitioning`. Then _recursion_ is used to continue the same process on the two sub arrays that were created (> and < the pivot) until the list is sorted. The sorted list will be the product of the < array Quicksort + pivot + > array Quicksort.
+
+- Quicksort has an average Big O notation of **_O(n log n)_** (it has a worst case Big O of **_O(n<sup>2</sup>)_**). Quicksort however has a smaller constant time that pther comparable **_O(n log n)_** sorting algorithms (such as _Merge Sort_) therefore it hits it's average case far more than it's worst case. The performance of Quicksort depends heavily on the pivot used.
+
+- See the [Quicksort](python/quicksort.py) file for a working example of the Binary Search algorithm, written in Python.
+
+---
+
 ## Search
 
 ### Binary Search
@@ -110,7 +110,7 @@ n = Number of operations
 
 - Binary Search runs in Logarithmic time (**_O(log n)_**), as opposed to Simple Searching running in Linear Time (**_O(n)_**).
 
-- See the [Binary Search](binary_search.py) file for a working example of the Binary Search algorithm, written in Python.
+- See the [Binary Search](python/binary_search.py) file for a working example of the Binary Search algorithm, written in Python.
 
 ### Breadth-First Search (BFS)
 
@@ -126,7 +126,7 @@ n = Number of operations
 
 - Nodes are searched in the order they are added, therefore the data structure is called a `Queue`. A queue is known as a `FIFO` data structure (First In First Out) The first node added is frnt of the queue to be searched and so on. A queue can either `Enqueue` (add an item to the queue aka `Push`) or `Dequeue` (take an item off the queue aka `Pop`).
 
-- See the [Breadth First Search](breadth_first_search.py) file for examples of implementing graphs in Python using hash tables.
+- See the [Breadth First Search](python/breadth_first_search.py) file for examples of implementing graphs in Python using hash tables.
 
 - Graphs can be `Directed` or `Undirected`. A directed graph is where edges run from one node to another node in only 1 direction (with an arrow for the direction). So the node A pointing to a node B will have B as its neighbour, but Node B wil have no neighbours. An undirected graph will have a line edge between two nodes, and they will both be neighbours of eachother. If all edges in a graph point away from the original node then this is known as a `Tree`.
 
@@ -134,9 +134,11 @@ n = Number of operations
 
 <img src='images/topological.png'>
 
-- See the [Breadth First Search](breadth_first_search.py) file for a working example of the BFS algorithm, written in Python.
+- See the [Breadth First Search](python/breadth_first_search.py) file for a working example of the BFS algorithm, written in Python.
 
-- BFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes) and E for Edges)
+- BFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes)) and E for Edges)
+
+### Dijkstras
 
 ---
 
