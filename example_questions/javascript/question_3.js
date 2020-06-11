@@ -4,14 +4,13 @@
 let words = ["hello", "world", "hello"];
 
 // 1
-
 const uniqueWords = (array) => {
   return [...new Set(array)];
 };
 
 console.log(uniqueWords(words));
 
-// 4
+// 2
 const uniqueWordsTwo = (array) => {
   let count = {};
   let unique = [];
