@@ -140,6 +140,31 @@ n = Number of operations
 
 ### Dijkstras
 
+- Where BFS found the path with the fewest 'stops' between nodes, but it does not necessarily mean it the fastest path - this is what `Dijkstra’s` algorithm works out for us. It works out based on the given time of each edge, what the shortest time to the end node is (regardless of how many nodes are passed).
+
+- In Dijkstra's algorithm, a `Weight` (number) is assigned to each edge, the algorithm therefore finds the path with the smallest total weight. For `Unweighted` graphs it is common practise to use BFS, for `Weighted` graphs Dijkstras is the algorithm of choice.
+
+- Graphs can also have `Cycles`, this means you can start at a node, travel around, and end up at the same node (like a loop).
+
+- Dijkstra’s algorithm only works with `Directed Acyclic Graphs` (DAGs).
+
+- Dijkstra’s algorithm has four steps:
+
+1. Find the cheapest node, this is the node you can get to in the least amount of time (smallest weight).
+2. Check whether there’s a cheaper path to the neighbors of this node. If so, update their costs.
+3. Repeat until you’ve done this for every node in the graph.
+4. Calculate the final path.
+
+- A `Negative Weight Edge` is when the weight of an edge is negative, i.e it would take 'time' off the travel to that node in the graph. negative-weight edges do not work with Dijkstra’s algorithm. If you want to find the shortest path in a graph that has negative-weight edges, you would have to use the `Bellman-Ford` algorithm.
+
+- See the [Dijkstra](python/dijkstra.py) file for a working example of the dijkstra algorithm, written in Python using the following graph as an example (3 hash tables are created, one for the `Graph`, one for the `Cost` and one for the `Parents`):
+
+<img src='images/dijkstra_example.png'>
+
+---
+
+## Greedy Algorithms
+
 ---
 
 ## Acknowledgements
