@@ -136,7 +136,7 @@ n = Number of operations
 
 - See the [Breadth First Search](python/breadth_first_search.py) file for a working example of the BFS algorithm, written in Python.
 
-- BFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes)) and E for Edges)
+- BFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes) and E for Edges)
 
 ### Dijkstras
 
