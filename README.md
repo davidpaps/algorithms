@@ -1,15 +1,21 @@
 # Algorithms & Data Structures
 
-This are my notes from my quest to understand algorithms and data structures. It serves as a guide and resource to the core concepts of algorithms, when to use them, and some of the most commonly used.
+This are my notes from my quest to understand algorithms and data structures. It serves as a guide and resource to the core concepts of algorithms, when to use them, and some of the most commonly used. Examples of the algorithms are included in `Python` and `JavaScript`.
 
 ---
 
 ## How to Run
 
-Clone this repo. Follow this readme along with each code example in its name file. To run the code in the command line, from the [Algorithms](algorithms) directy type in the command line:
+Clone this repo. Follow this readme along with each code example in its name file. To run the code in the command line, from the [Algorithms](algorithms) directy type in the command line for Python files:
 
 ```
 python python/file_name.py
+```
+
+And for JavaScript files, in the command line type:
+
+```
+node javascript/fileName.js
 ```
 
 I have also included some example questions from [Leet Code](https://leetcode.com/) and [Hacker Rank](https://www.hackerrank.com/) that I felt are good for testing your knowledge. These are in the [Example Questions](example_questions/javascript) directory. To run my examples, make sure you have **Node** installed on your machine and navigate to the questions directory and in the command line type in:
