@@ -72,7 +72,7 @@ n = Number of operations
 
 - A hash table has keys and values. The keys are the strings and the value is stored associated to that key. A hash table maps keys to values, therefore it is important for hash functions to consistently return the same output for the same input.
 
-- See the [Hash Table](python/hash_table.py) file for an example of creating and using a hash table, written in Python.
+- See the [Hash Table](python/hash_table.py) file for an example of creating and using a hash table, written in Python. - See the [Hash Table](javascript/hashTable.js) file for an example of creating and using a hash table, written in JavaScript.
 
 - Hash tables are used for reading the values on a huge scale as they are instant in retrieving the information. You can also use the `.get` function in python to get the value of a key if it exists in the hash table, if not it will return the `None` value. The `guest_list` example in the [Hash Table](python/hash_table.py) file shows how fast it is to check if an entry exists in a hash table (duplicates), rathe rthan searching through the entire list first.
 
@@ -98,7 +98,7 @@ n = Number of operations
 
 - Each element in the initial list has to be searched through, this takes **_O(n)_**. You then have to repeat this **_n x n_** times as you keep going through the original list. This therefore has a Big O notation of **_O(n<sup>2</sup>)_**.
 
-- See the [Selection Sort](python/selection_sort.py) file for a working example of the Selection Sort algorithm, written in Python.
+- See the [Selection Sort](python/selection_sort.py) file for a working example of the Selection Sort algorithm, written in Python. See the [Selection Sort](javascript/selectionSort.js) file for a working example of the Selection Sort algorithm, written in JavaScript.
 
 ### Quicksort
 
@@ -106,7 +106,7 @@ n = Number of operations
 
 - Quicksort has an average Big O notation of **_O(n log n)_** (it has a worst case Big O of **_O(n<sup>2</sup>)_**). Quicksort however has a smaller constant time that pther comparable **_O(n log n)_** sorting algorithms (such as _Merge Sort_) therefore it hits it's average case far more than it's worst case. The performance of Quicksort depends heavily on the pivot used.
 
-- See the [Quicksort](python/quicksort.py) file for a working example of the Binary Search algorithm, written in Python.
+- See the [Quicksort](python/quicksort.py) file for a working example of the Binary Search algorithm, written in Python. See the [Quicksort](javascript/quickSort.js) file for a working example of the Binary Search algorithm, written in Python.
 
 ---
 
@@ -138,7 +138,7 @@ n = Number of operations
 
 - Nodes are searched in the order they are added, therefore the data structure is called a `Queue`. A queue is known as a `FIFO` data structure (First In First Out) The first node added is frnt of the queue to be searched and so on. A queue can either `Enqueue` (add an item to the queue aka `Push`) or `Dequeue` (take an item off the queue aka `Pop`).
 
-- See the [Breadth First Search](python/breadth_first_search.py) file for examples of implementing graphs in Python using hash tables.
+- See the [Breadth First Search](python/breadth_first_search.py) file for examples of implementing graphs in Python using hash tables. See the [Breadth First Search](javascript/breadthFirstSearch.js) file for examples of implementing graphs in JavaScript using hash tables.
 
 - Graphs can be `Directed` or `Undirected`. A directed graph is where edges run from one node to another node in only 1 direction (with an arrow for the direction). So the node A pointing to a node B will have B as its neighbour, but Node B wil have no neighbours. An undirected graph will have a line edge between two nodes, and they will both be neighbours of eachother. If all edges in a graph point away from the original node then this is known as a `Tree`.
 
@@ -146,7 +146,7 @@ n = Number of operations
 
 <img src='images/topological.png'>
 
-- See the [Breadth First Search](python/breadth_first_search.py) file for a working example of the BFS algorithm, written in Python.
+- See the [Breadth First Search](python/breadth_first_search.py) file for a working example of the BFS algorithm, written in Python. See the [Breadth First Search](javascript/breadthFirstSearch.js) file for a working example of the BFS algorithm, written in JavaScript.
 
 - BFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes) and E for Edges)
 
@@ -169,7 +169,7 @@ n = Number of operations
 
 - A `Negative Weight Edge` is when the weight of an edge is negative, i.e it would take 'time' off the travel to that node in the graph. negative-weight edges do not work with Dijkstra’s algorithm. If you want to find the shortest path in a graph that has negative-weight edges, you would have to use the `Bellman-Ford` algorithm.
 
-- See the [Dijkstra](python/dijkstra.py) file for a working example of the dijkstra algorithm, written in Python using the following graph as an example (3 hash tables are created, one for the `Graph`, one for the `Cost` and one for the `Parents`):
+- See the [Dijkstra](python/dijkstra.py) file for a working example of the dijkstra algorithm, written in Python (or written in JavaScript [here](javascript/dijkstra.js)using the following graph as an example (3 hash tables are created, one for the `Graph`, one for the `Cost` and one for the `Parents`):
 
 <img src='images/dijkstra_example.png'>
 
