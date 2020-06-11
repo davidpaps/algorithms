@@ -12,7 +12,7 @@ Clone this repo. Follow this readme along with each code example in its name fil
 python python/file_name.py
 ```
 
-I have also included some example questions from [Leet Code]() and [Hacker Rank]() that I felt are good for testing your knowledge. These are in the [Example Questions]() directory, to run my examples, navigate to the questions directory and in the command line type in:
+I have also included some example questions from [Leet Code](https://leetcode.com/) and [Hacker Rank](https://www.hackerrank.com/) that I felt are good for testing your knowledge. These are in the [Example Questions](example_questions/javascript) directory. To run my examples, make sure you have **Node** installed on your machine and navigate to the questions directory and in the command line type in:
 
 ```
 node file_name.js
