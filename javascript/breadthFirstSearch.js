@@ -27,3 +27,5 @@ const bfs = (name) => {
   }
   return false;
 };
+
+bfs("me");
