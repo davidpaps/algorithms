@@ -10,7 +10,7 @@ console.log(friends);
 
 const friendHasM = (name) => name[name.length - 1] === "m";
 
-const search = (name) => {
+const bfs = (name) => {
   let searchFriends = [];
   searchFriends = searchFriends.concat(friends[name]);
   const searched = [];
@@ -27,5 +27,3 @@ const search = (name) => {
   }
   return false;
 };
-
-search("me");

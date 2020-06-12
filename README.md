@@ -233,6 +233,8 @@ You will see other Data Structures described later on in the algorithm descripti
 
 - When useing DFS, it is probable you will traverse through more edges to reach the destination from a source. It is more suitable when there are solutions awy from the souce (BFS is the inverse of this).
 
+- See the [Depth First Search](python/depth_first_search.py) file for a working example of the BFS algorithm, written in Python.
+
 - DFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes) and E for Edges)
 
 ---

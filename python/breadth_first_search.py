@@ -14,7 +14,7 @@ def friend_has_m(name):
     return name[-1] == 'm'
 
 
-def search(name):
+def bfs(name):
     search_friends = deque()
     search_friends += friends[name]
     searched = []
@@ -30,5 +30,5 @@ def search(name):
     return False
 
 
-print(search("me"))
+print(bfs("me"))
 
