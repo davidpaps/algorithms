@@ -2,6 +2,8 @@
 
 This are my notes from my quest to understand algorithms and data structures. It serves as a guide and resource to the core concepts of algorithms, when to use them, and some of the most commonly used. Examples of the algorithms are included in `Python` and `JavaScript`.
 
+For benchmarking and a visual display of the time it takes to run the algorithms we will talk about below, visit [Algorithmic Complexity](https://github.com/davidpaps/algorithmic_complexity).
+
 ---
 
 ## How to Run
@@ -12,13 +14,13 @@ Clone this repo. Follow this readme along with each code example in its name fil
 python python/file_name.py
 ```
 
-And for JavaScript files, in the command line type:
+And for JavaScript files make sure you have **Node** installed on your machine and in the command line type:
 
 ```
 node javascript/fileName.js
 ```
 
-I have also included some example questions from [Leet Code](https://leetcode.com/) and [Hacker Rank](https://www.hackerrank.com/) that I felt are good for testing your knowledge. These are in the [Example Questions](example_questions/javascript) directory. To run my examples, make sure you have **Node** installed on your machine and navigate to the questions directory and in the command line type in:
+I have also included some example questions from [Leet Code](https://leetcode.com/) and [Hacker Rank](https://www.hackerrank.com/) that I felt are good for testing your knowledge. These are in the [Example Questions](example_questions/javascript) directory. To run my examples, navigate to the questions directory and in the command line type in:
 
 ```
 node file_name.js
@@ -38,35 +40,78 @@ Logs are the flip of exponentials:
 - 10<sup>3</sup> = 1000 => log<sub>10</sub> 1000 = 3
 - 10<sup>4</sup> = 10000 => log<sub>10</sub> 10000 = 4
 
+---
+
 ### Recursion
 
-Recursion is where a function calls itself inside it's function. Every recursive function has 2 parts, the `Base Case` and the `Recursive Case`. The recursive case is when the function calls itself, the base case is when ths function does not call itself again. This is important as to not cause an infinite loop. Recursion uses the `call stack` to save the variables for multiple functions in memory, it only does one of two things - adds a function call or removes a function call from the stack. A recursive call with the same variable cannot access another variable in the call stack. Using the stack is convenient, however it can use lots of memory as your computer is saving information for many function calls.
+- Recursion is where a function calls itself inside it's function. Every recursive function has 2 parts, the `Base Case` and the `Recursive Case`. The recursive case is when the function calls itself, the base case is when ths function does not call itself again, this is important as to not cause an infinite loop.
+
+- Recursion uses the `call stack` to save the variables for multiple functions in memory, it only does one of two things - adds a function call or removes a function call from the stack. A recursive call with the same variable cannot access another variable in the call stack. Using the stack is convenient, however it can use lots of memory as your computer is saving information for many function calls.
+
+---
 
 ### Divide and Conquer
 
 An algorithm design based on multi-branched recursion. It works by recursivly breaking down a problem into two or more sub problems of the same type. You would figure out a simple case to be the base case of the algorithm, and then figure out how to reduce your problem and get to the base case.
 
+---
+
 ### Big O Notation
 
-Big O gives a worst case scenario run time. of an algorithm, it tells us how fast an algorithm is, and how the running time is affected if the list size is changed. Big O doesn’t tell you the speed in seconds. Big O notation lets you compare the number of operations, it tells you how fast the algorithm grows.
+- Big O gives a worst case scenario run time. of an algorithm, it tells us how fast an algorithm is, and how the running time is affected if the list size is changed. Big O doesn’t tell you the speed in seconds. Big O notation lets you compare the number of operations, it tells you how fast the algorithm grows.
 
 `O(n)`
 O = 'Big O'
 n = Number of operations
 
-**Example:**
-
-- O(log n) _Example:_ Binary search.
-- O(n) _Example:_ Simple search.
-- O(n \* log n) _Example:_ Quicksort.
-- O(n<sup>2</sup>) _Example:_ Selection sort.
-- O(n!) _Example:_ A really slow algorithm.
+- O(1) = **Constant Time**
+- O(log n) = **Logarithmic Time** _Example:_ Binary search.
+- O(n) = **Linear Time** _Example:_ Simple search.
+- O(n \* log n) = **Linearithmic Time** _Example:_ Quicksort.
+- O(n<sup>2</sup>) = **Quadratic Time** _Example:_ Selection sort.
+- O(n!) = **Factorial Time** _Example:_ A really slow algorithm.
 
 <img src='images/comparison.png'>
 
 ---
 
-## Hash Tables
+## Data Structures
+
+---
+
+### Arrays
+
+- Arrays store elements in memory, and these elements are allocated consecutive in 'blocks' of memory. If you want to add an element to an array that has already been created, the computer will have to find space in memory that will house all the elements consecutivly (regardless of where the new element is added).
+
+- Therefore if you are out of memory, the computer has to do lots of work to allocate all the data to a new place in memory. You can assign more space that you need to avoid this happening, but then that memory is wasted and cannot be used elsewhere.
+
+- Arrays advatage is that they are very quick at reading the elements in the 'blocks'. If we know an array has 5 blocks, (and we know the index starts at 0) we can nstantly access any element by referencing its index number (array[0]).
+
+- When deleting an element from an array, every element in the array needs to be moved up by 1 index, thus it is a costly execution.
+
+- For reading an element in an Array, the Big O is **_O(1)_**, for inserting an element into an array the Big O is **_O(n)_**, for deleting an element in an array, the Big O is **_O(n)_**.
+
+- Arrays are generally used more as they allow `Random Access` (access to elements instantly anywhere in the array).
+
+---
+
+### Linked Lists
+
+- Linked lists behave like an array in many ways, however elements in a list do not need to be stored consecutivly, they can be allocated all over the computers memory. Each item will store the address of the next item in the list - the random memory addresses are linked together.
+
+- Adding an item to a link list is very easy, as the element can be stored anywhere in memory, the previous element will therefore point to this new elements memory address (regardless of where the new element is added).
+
+- Linked lists are however slow at reading elements. If a link list contains 10 elements, you cannot simply start searching at index number 9. You have to begin at the start, as each one refers to the next elements memory address.
+
+- Deleting an element in a linked list is also quick, it just needs to change the previous element to point to a different place in memory.
+
+- For reading an element in a linked list, the Big O is **_O(n)_**, for inserting an element into a linked list the Big O is **_O(1)_**, for deleting an element in a linked list, the Big O is **_O(1)_**.
+
+- Linked lists are not used as often as they only allow `Sequential Access` (you have to start at the first element into the list and proceed one by one to then reach the desired element).
+
+---
+
+### Hash Tables
 
 - Has tables are a very fast and efficient data structure for storing, reading and inserting data. A hash table uses a `Hash Function` to compute a string into an index of an array, where the value will be stored in. The hash function will map a string to the same index every time, therefore it is very quick to read the value of what you are asking for.
 
@@ -90,9 +135,11 @@ n = Number of operations
 
 ---
 
-## Sort
+## Algortihms
 
-### Selection Sort
+### Sort
+
+#### Selection Sort
 
 - This algorithm goes through a list, searches for the smallest/largest element, and adds that element to a new list. It then repeats to find the next element in order. It keeps doing this until we end up with an ordered list.
 
@@ -100,7 +147,9 @@ n = Number of operations
 
 - See the [Selection Sort](python/selection_sort.py) file for a working example of the Selection Sort algorithm, written in Python. See the [Selection Sort](javascript/selectionSort.js) file for a working example of the Selection Sort algorithm, written in JavaScript.
 
-### Quicksort
+---
+
+#### Quicksort
 
 - Quicksort uses the _Divide and Conquer_ strategy, and is commonly used as the in built sort function in many programmin languages. Quicksort involves selecting a `pivot` from a given list. The pivot is used to compare every other element in the array (> or < than the pivot). This process is called `Partitioning`. Then _recursion_ is used to continue the same process on the two sub arrays that were created (> and < the pivot) until the list is sorted. The sorted list will be the product of the < array Quicksort + pivot + > array Quicksort.
 
@@ -110,9 +159,9 @@ n = Number of operations
 
 ---
 
-## Search
+### Search
 
-### Binary Search
+#### Binary Search
 
 - Its input is a sorted list of elements. If an element you’re looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null. Binary search first accesses the middle element of the sorted list and therefore elimintes half of the numbers straight away. This is then repeated, it searches for the midde number and then eliminates half of the remaining numbers every time.
 
@@ -124,7 +173,9 @@ n = Number of operations
 
 - See the [Binary Search](python/binary_search.py) file for a working example of the Binary Search algorithm, written in Python.
 
-### Breadth-First Search (BFS)
+---
+
+#### Breadth-First Search (BFS)
 
 - BFS allows you to find the shortest distance between two things. BFS is used to solve `Shortest Path` problems, this could be shortest route on public transport, it also could be the shrtest number of moves to win in a game of chess.
 
@@ -150,7 +201,9 @@ n = Number of operations
 
 - BFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes) and E for Edges)
 
-### Dijkstras
+---
+
+#### Dijkstras
 
 - Where BFS found the path with the fewest 'stops' between nodes, but it does not necessarily mean it the fastest path - this is what `Dijkstra’s` algorithm works out for us. It works out based on the given time of each edge, what the shortest time to the end node is (regardless of how many nodes are passed).
 
@@ -175,7 +228,9 @@ n = Number of operations
 
 ---
 
-## Greedy Algorithms
+### Greedy Algorithms
+
+#### Example
 
 ---
 
