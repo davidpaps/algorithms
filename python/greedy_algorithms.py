@@ -12,14 +12,14 @@ print(fruits - vegetables)
 print(vegetables - fruits)
 
 # Example
-states_needed = set(["mt", "wa", "or", "id", "nv", "ut", "ca", "az"])
+states_needed = set(["a", "b", "c", "d", "e", "f", "g", "h"])
 
 stations = {}
-stations["kone"] = set(["id", "nv", "ut"])
-stations["ktwo"] = set(["wa", "id", "mt"])
-stations["kthree"] = set(["or", "nv", "ca"])
-stations["kfour"] = set(["nv", "ut"])
-stations["kfive"] = set(["ca", "az"])
+stations["kone"] = set(["d", "e", "f"])
+stations["ktwo"] = set(["b", "d", "a"])
+stations["kthree"] = set(["c", "e", "g"])
+stations["kfour"] = set(["e", "f"])
+stations["kfive"] = set(["g", "h"])
 
 final_stations = set()
 

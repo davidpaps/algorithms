@@ -151,6 +151,10 @@ n = Number of operations
 
 ---
 
+You will see other Data Structures described later on in the algorithm descriptions. These include `Graphs`, `Trees`, `Stacks` and `Queues`.
+
+---
+
 ## Algortihms
 
 ### Sort
@@ -203,7 +207,7 @@ n = Number of operations
 
 - BFS first searches 'first degree' neighbours as this is more efficient, then it searches 'second degree' neighbours and so on. It will create lists to search, first the nearest neighbours (perhaps connected by one edge), and then a second list of all nodes that are neighbours to the starting nodes neighbours.
 
-- Nodes are searched in the order they are added, therefore the data structure is called a `Queue`. A queue is known as a `FIFO` data structure (First In First Out) The first node added is frnt of the queue to be searched and so on. A queue can either `Enqueue` (add an item to the queue aka `Push`) or `Dequeue` (take an item off the queue aka `Pop`).
+- Nodes are searched in the order they are added, therefore the data structure is called a `Queue`. A queue is known as a `FIFO` data structure (First In First Out). The first node added is front of the queue to be searched and so on. A queue can either `Enqueue` (add an item to the queue aka `Push`) or `Dequeue` (take an item off the queue aka `Pop`).
 
 - See the [Breadth First Search](python/breadth_first_search.py) file for examples of implementing graphs in Python using hash tables. See the [Breadth First Search](javascript/breadthFirstSearch.js) file for examples of implementing graphs in JavaScript using hash tables.
 
@@ -216,6 +220,28 @@ n = Number of operations
 - See the [Breadth First Search](python/breadth_first_search.py) file for a working example of the BFS algorithm, written in Python. See the [Breadth First Search](javascript/breadthFirstSearch.js) file for a working example of the BFS algorithm, written in JavaScript.
 
 - BFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes) and E for Edges)
+
+---
+
+#### Depth-First Search (DFS)
+
+- DFS is an Edge based technique (whereas BFS is a node based technique).
+
+- DFS is faster than BFS, and uses a `Stack` data structure. A stack is known as a `LIFO` data structure (Last in First Out). Visited Nodes are pushed into the stack, and then if there are no nodes, the visited ones are popped.
+
+- DFS will explore neighbours of the node just searched, before searching the rest of the source nodes first degree neighbours.
+
+- When useing DFS, it is probable you will traverse through more edges to reach the destination from a source. It is more suitable when there are solutions awy from the souce (BFS is the inverse of this).
+
+- DFS has a Big O of **_O(V+E)_** (V for number of `Vertices` (Nodes) and E for Edges)
+
+---
+
+<img src='images/bfs_dfs.png'>
+
+- If using BFS on the above graph, the output would be `A B C D E F`.
+
+- If using BFS on the above graph, the output would be `A B D C E F`.
 
 ---
 

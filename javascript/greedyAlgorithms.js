@@ -44,14 +44,14 @@ console.log(difference(fruits, vegetables));
 console.log(difference(vegetables, fruits));
 
 // Example
-let statesNeeded = new Set(["mt", "wa", "or", "id", "nv", "ut", "ca", "az"]);
+let statesNeeded = new Set(["a", "b", "c", "d", "e", "f", "g", "h"]);
 
 const stations = {};
-stations.kone = new Set(["id", "nv", "ut"]);
-stations.ktwo = new Set(["wa", "id", "mt"]);
-stations.kthree = new Set(["or", "nv", "ca"]);
-stations.kfour = new Set(["nv", "ut"]);
-stations.kfive = new Set(["ca", "az"]);
+stations.kone = new Set(["d", "e", "f"]);
+stations.ktwo = new Set(["b", "d", "a"]);
+stations.kthree = new Set(["c", "e", "g"]);
+stations.kfour = new Set(["e", "f"]);
+stations.kfive = new Set(["g", "h"]);
 
 const finalStations = new Set();
 
