@@ -20,7 +20,7 @@ And for JavaScript files make sure you have **Node** installed on your machine a
 node javascript/fileName.js
 ```
 
-I have also included some example questions from [Leet Code](https://leetcode.com/) and [Hacker Rank](https://www.hackerrank.com/) that I felt are good for testing your knowledge. These are in the [Example Questions](example_questions/javascript) directory. To run my examples, navigate to the questions directory and in the command line type in:
+I have also included some example questions from [Leet Code](https://leetcode.com/) and [Hacker Rank](https://www.hackerrank.com/) that I felt are good for testing your knowledge. These are in the [Questions](questions) directory. To run my examples, navigate to the questions directory and in the command line type in:
 
 ```
 node file_name.js
@@ -111,6 +111,20 @@ n = Number of operations
 
 ---
 
+### Sets
+
+- Sets are a datastructre like a list, except they can not have duplicates. An array can be passed in to a set, and the return will be a set containing all unique elements.
+
+- Sets have some interesting properties:
+
+- A set `Union` can be created, which combines two or more sets.
+- A set `Intersection` can be created, which finds the items that appear in 2 or more sets.
+- a set `Difference` can be created, which subtracts the items in one set, from an item in another if they are equal.
+
+- See these files for examples of sets, written in [Python](python/greedy_algorithms.py) and [JavaScript](javascript/greedyAlgorithms.js).
+
+---
+
 ### Hash Tables
 
 - Has tables are a very fast and efficient data structure for storing, reading and inserting data. A hash table uses a `Hash Function` to compute a string into an index of an array, where the value will be stored in. The hash function will map a string to the same index every time, therefore it is very quick to read the value of what you are asking for.
@@ -132,6 +146,8 @@ n = Number of operations
 - The load factor is number of items in a hash table / the total number of slots. Therefore you want yout load factor to be < 1, otherwise you will want to `Resize` and increase the capacity of the array that is used for storage in the hash table. A good rule of thumb is to resize once the hash table has a load factor of < 0.7.
 
 - A good hash function is one that distributes values evenly in an array, rather than in consecutive slots.
+
+- See these files for examples of hash tables, written in [Python](python/breadth_first_search.py) and [JavaScript](javascript/breadthFirstSearch.js).
 
 ---
 
@@ -230,7 +246,15 @@ n = Number of operations
 
 ### Greedy Algorithms
 
-#### Example
+- Greedy algorithms pick the locally optimal solution at at each step, that is at each step pick the optimal move - Simple! Greedy algorithms are not always perfect but they are always pretty good - sometimes being perfect is the enemy of good. Sometimes an algorithm is useful when it is easy to write and gets pretty close to what you want.
+
+- As they are easy to write and simple in nature, they are normally fast.
+
+#### Approximation Algorithms
+
+- Approximation algorithms are useful when working out the exact solution will take too much time.
+
+- Approximation algorithms are judged by 1) How fast they are, and 2) How close to the optimal solution they are.
 
 ---
 
