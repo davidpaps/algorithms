@@ -248,13 +248,26 @@ n = Number of operations
 
 - Greedy algorithms pick the locally optimal solution at at each step, that is at each step pick the optimal move - Simple! Greedy algorithms are not always perfect but they are always pretty good - sometimes being perfect is the enemy of good. Sometimes an algorithm is useful when it is easy to write and gets pretty close to what you want.
 
-- As they are easy to write and simple in nature, they are normally fast.
+- As they are easy to write and simple in nature, they are normally fast. BFS and Dijkstra are examples of Greedy Algorithms.
+
+- `Nondeterministic Polynomial` (NP) complete problems have no known fast solutions. A problem may be NP complete if it follows one of the following rules/examples:
+
+- Your algorithm runs quickly with a handful of items but really slows down with more items.
+- “All combinations of X” usually point to an NP-complete problem.
+- Do you have to calculate “every possible version” of X because you can’t break it down into smaller sub-problems?
+- If your problem involves a sequence (such as a sequence of cities, like traveling salesperson), and it’s hard to solve.
+- If your problem involves a set and it’s hard to solve.
+- Can you restate your problem as the set-covering problem or the traveling-salesperson problem?
+
+- If you have an NP problem, your best option is to run an approximation algorithm instead.
 
 #### Approximation Algorithms
 
 - Approximation algorithms are useful when working out the exact solution will take too much time.
 
 - Approximation algorithms are judged by 1) How fast they are, and 2) How close to the optimal solution they are.
+
+- See the [Greedy Algorithm](python/greedy_algorithms.py) file for a working example of an approximation algorithm using sets, written in Python. See the [Greedy Algorithm](javascript/greedyAlgorithms.js) file for a working example of an approximation algorithm using sets, written in JavaScript.
 
 ---
 
