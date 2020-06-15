@@ -171,11 +171,25 @@ You will see other Data Structures described later on in the algorithm descripti
 
 #### Quicksort
 
-- Quicksort uses the _Divide and Conquer_ strategy, and is commonly used as the in built sort function in many programmin languages. Quicksort involves selecting a `pivot` from a given list. The pivot is used to compare every other element in the array (> or < than the pivot). This process is called `Partitioning`. Then _recursion_ is used to continue the same process on the two sub arrays that were created (> and < the pivot) until the list is sorted. The sorted list will be the product of the < array Quicksort + pivot + > array Quicksort.
+- Quicksort is an internal algorithm that uses the _Divide and Conquer_ strategy, and is commonly used as the in built sort function in many programmin languages. Quicksort involves selecting a `pivot` from a given list. The pivot is used to compare every other element in the array (> or < than the pivot).
+
+- This process is called `Partitioning`. Then _recursion_ is used to continue the same process on the two sub arrays that were created (> and < the pivot) until the list is sorted. The sorted list will be the product of the < array Quicksort + pivot + > array Quicksort, and the size of the dataset.
 
 - Quicksort has an average Big O notation of **_O(n log n)_** (it has a worst case Big O of **_O(n<sup>2</sup>)_**). Quicksort however has a smaller constant time that other comparable **_O(n log n)_** sorting algorithms (such as _Merge Sort_) therefore it hits it's average case far more than it's worst case. The performance of Quicksort depends heavily on the pivot used.
 
-- See the [Quicksort](python/quicksort.py) file for a working example of the Binary Search algorithm, written in Python. See the [Quicksort](javascript/quickSort.js) file for a working example of the Binary Search algorithm, written in Python.
+- See the [Quicksort](python/quicksort.py) file for a working example of the Quicksort algorithm, written in Python. See the [Quicksort](javascript/quickSort.js) file for a working example of the Quicksort algorithm, written in JavaScript.
+
+---
+
+#### Merge Sort
+
+- Merge sort is an external algorithm that uses the _Divide and Conquer_ strategy. Elements are divided into two arrays, (half of the length of the original array) and then divided again until only 1 element is left. Quicksort on the other hand is split at a random point depending on the pivot used.
+
+- Merge sort uses an additional array (3 in total), the first 2 store each half of the original array, and the third is used for the final sorted array. The 2 'split' arrays sort the order each time they are merged with another split array, these are recursivly merged and sorted until they end as part of the final array. Merge sort therefore requires additional memory for these auxillary arrays, where Quicksort does not.
+
+- Merge sort has a Big O notation of **_O(n log n)_**. Worst case and average case has the same complexities, therefore over a larger dataset it is more efficient compared to quicksort (however the opposite is reversed for smaller datasets).
+
+- See the [Merge Sort](javascript/mergeSort.js) file for a working example of the merge sort algorithm, written in JavaScript.
 
 ---
 
