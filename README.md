@@ -209,6 +209,10 @@ You will see other Data Structures described later on in the algorithm descripti
 
 ---
 
+<img src='images/sort.png'>
+
+---
+
 ### Search
 
 #### Binary Search
