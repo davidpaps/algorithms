@@ -187,9 +187,25 @@ You will see other Data Structures described later on in the algorithm descripti
 
 - Merge sort uses an additional array (3 in total), the first 2 store each half of the original array, and the third is used for the final sorted array. The 2 'split' arrays sort the order each time they are merged with another split array, these are recursivly merged and sorted until they end as part of the final array. Merge sort therefore requires additional memory for these auxillary arrays, where Quick sort does not.
 
-- Merge sort has a Big O notation of **_O(n log n)_**. Worst case and average case has the same complexities, therefore over a larger dataset it is more efficient compared to quicksort (however the opposite is reversed for smaller datasets).
+- Merge sort has a Big O notation of **_O(n log n)_**. Worst case and average case has the same complexities, therefore over a larger dataset it is more efficient compared to quicksort (however the opposite is reversed for smaller datasets). In Mergesort, the list is being split in **_log(n)_** calls, and the merging process takes linear time in each call.
 
-- See the [Merge Sort](javascript/mergeSort.js) file for a working example of the merge sort algorithm, written in JavaScript.
+- See the [Merge Sort](python/merge_sort.py) file for a working example of the merge sort algorithm, written in Python. See the [Merge Sort](javascript/mergeSort.js) file for a working example of the merge sort algorithm, written in JavaScript.
+
+---
+
+#### Insertion Sort
+
+- Insertion sort is a simple comparison based sorting algorithm. It builds the final sorted array one element at a time. It starts at index 0 and will place the next element before itself if it is smaller, or place it in the correct index relating to its value. It will continue doing this until it has reaced the last element in the list, therefore giving a sorted array.
+
+- It is faster for small datasets because Quick Sort has extra overheads from the recursive function calls during its divide and conquer actions.
+
+- It is also very fast for arrays which are largly sorted, as it will require less swapping actions. Insertion sort is also more stable than Quick sort and requires less memory.
+
+- Insertion sort takes maximum time to execute if the list is in reverse order, and minimum time to execute if the list is in regular order.
+
+- Insertion sort has an average Big O notation of **_O(n<sup>2</sup>)_** (The best case of insertion sort is **_O(n)_** when an array is already sorted).
+
+- See the [Insertion Sort](python/insertion_sort.py) file for a working example of the insertion sort algorithm, written in Python. See the [Insertion Sort](javascript/insertionSort.js) file for a working example of the insertion sort algorithm, written in JavaScript.
 
 ---
 

@@ -13,4 +13,4 @@ letters.S = ["A", "C", "G"];
 
 console.log(letters);
 
-const dfs = (graph, node, visited) => {};
+const dfs = () => {};
