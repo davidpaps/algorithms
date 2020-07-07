@@ -4,9 +4,11 @@
 
 // sockMerchant has the following parameter(s):
 
-// n: the number of socks in the pile
-// ar: the colors of each sock
-// Return the total number of matching pairs of socks that John can sell.
+// n: the number of socks in the pile (integer)
+// ar: the colors of each sock (an array of integers)
+// Return the total number of matching pairs of socks that John can sell (as a single integer).
+
+// E.g 5, [1, 1, 2, 2, 1] => 2
 
 const sockMerchant = (n, ar) => {
   if (n > 1) {
@@ -28,3 +30,5 @@ const sockMerchant = (n, ar) => {
     return 0;
   }
 };
+
+console.log(sockMerchant(5, [1, 1, 2, 2, 1]));
