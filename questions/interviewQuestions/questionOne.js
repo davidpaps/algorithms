@@ -35,7 +35,7 @@ console.log(uniqueTwo(numbers));
 // 3 ES6
 // Sets are iterated in insertion order, so this code preserves the order of the original array.
 const uniqueThree = (array) => {
-  return [...new Set(numbers)];
+  return [...new Set(array)];
 };
 
 console.log(uniqueThree(numbers));
