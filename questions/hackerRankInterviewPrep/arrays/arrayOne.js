@@ -26,6 +26,7 @@
 
 const hourGlassSum3D = (arr) => {
   let array = arr.flat();
+  // ([].concat(...arr)) if browser does not support .flat()
   let scores = [];
 
   for (let j = 0; j <= 18; j += 6) {
