@@ -10,12 +10,19 @@
 // (2 x 3)
 
 const birthdayCakeCandles = (ar) => {
-  let sorted = ar.sort().reverse();
-  let tall = sorted[0];
+  let largest = ar[0];
+  for (let i = 0; i < ar.length; i++) {
+    if (largest < ar[i]) {
+      largest = ar[i];
+    }
+  }
+
   let count = 0;
-  sorted.forEach((number) => {
-    number === tall && count++;
+
+  ar.forEach((number) => {
+    number === largest && count++;
   });
+
   return count;
 };
 
