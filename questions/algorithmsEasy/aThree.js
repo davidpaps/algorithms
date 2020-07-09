@@ -5,7 +5,7 @@
 // The first line contains a single integer, n, the number of rows and columns in the matrix array.
 
 // diagonalDifference takes the following parameter:
-// arr: an array of integers (2D)
+// arr: an array of arrays of integers (3D)
 
 // The integer returned must be the absolute value of the difference.
 
@@ -19,12 +19,29 @@
 // E.g: [1, 2, 3, 4, 5, 6, 7, 8 ,9] => 0
 
 const diagonalDifference = (arr) => {
-  let left = arr[0] + arr[4] + arr[8];
-  let right = arr[2] + arr[4] + arr[6];
+  let size = arr.length;
+  let array = [].concat(...arr);
 
-  let difference = left - right;
+  let left = 0;
+  for (let i = 0; i <= array.length; i += size + 1) {
+    left += array[i];
+  }
 
-  return Math.abs(difference);
+  let right = 0;
+  for (let i = size - 1; i < array.length - (size - 1); i += size - 1) {
+    right += array[i];
+  }
+
+  console.log(right);
+  let difference = Math.abs(left - right);
+
+  return difference;
 };
 
-console.log(diagonalDifference([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(
+  diagonalDifference([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ])
+);
