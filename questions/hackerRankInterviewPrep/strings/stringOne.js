@@ -20,6 +20,10 @@ const makeAnagram = (a, b) => {
   let small = size[0].split("");
   let large = size[1].split("");
 
+  console.log("small", small);
+
+  console.log("large", large);
+
   let matches = 0;
 
   small.forEach((letter) => {
@@ -27,11 +31,11 @@ const makeAnagram = (a, b) => {
 
     if (indexInLong !== -1) {
       matches++;
-      large[indexInLong] = "";
     }
   });
 
   let deletions = a.length + b.length - matches * 2;
+
   return deletions;
 };
 
