@@ -20,6 +20,7 @@
 // {[()]}
 // {[(])}
 // {{[[(())]]}}
+//  => YES  NO  YES
 
 const processData = (input) => {
   let lines = input.split("\n");

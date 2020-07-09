@@ -9,32 +9,27 @@
 
 // E.g: Note =  "Attack at dawn"  Magazine = "attack at dawn" => No
 
-const checkMagazine = (magazine, note) => {
-  let magArray = magazine.split(" ");
-  let noteArray = note.split(" ");
+const checkMagazine = (mag, note) => {
+  let magazine = mag.split(" ");
+  let ransom = note.split(" ");
+  let tracker = {};
 
-  let hash = {};
+  for (let i = 0; i < magazine.length; i++) {
+    if (!tracker[magazine[i]]) {
+      tracker[magazine[i]] = 0;
+    }
+    tracker[magazine[i]]++;
+  }
 
-  magArray.forEach((word) => {
-    if (hash[word] === undefined) {
-      hash[word] = 1;
+  for (let i = 0; i < ransom.length; i++) {
+    if (tracker[ransom[i]]) {
+      tracker[ransom[i]]--;
     } else {
-      hash[word] += 1;
+      return "No";
     }
-  });
+  }
 
-  let count = [];
-
-  noteArray.forEach((word) => {
-    if (hash[word] !== undefined) {
-      count.push(word);
-    }
-  });
-  count.length === noteArray.length ? console.log("Yes") : console.log("No");
+  return "Yes";
 };
 
-checkMagazine("attack at dawn", "Attack at dawn");
-// No
-
-checkMagazine("two times three is not four", "two times two is four");
-// No
+console.log(checkMagazine("attack at dawn", "Attack at dawn"));
