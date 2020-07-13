@@ -20,7 +20,11 @@ And for JavaScript files make sure you have **Node** installed on your machine a
 node javascript/fileName.js
 ```
 
-I have also included some example questions from [Leet Code](https://leetcode.com/) and [Hacker Rank](https://www.hackerrank.com/) that I felt are good for testing your knowledge. These are in the [Questions](questions) directory. To run my examples, navigate to the questions directory and in the command line type in:
+I have also included some example questions from [Leet Code](https://leetcode.com/) and [Hacker Rank](https://www.hackerrank.com/) that I felt are good for testing knowledge. I have included common algorithmic questions involcing hash's, arrays, sorting and searching algorithms. There is also a general 'Problem Solving' directory with basic problems that often make up the parts of a more complex question. The HackerRank interverw prep course has also been included with my answers.
+
+I have also included a few example questions I have personally had from technical interviews - from the real world!
+
+All of the above are in the [Questions](questions) directory. To run my examples, navigate to the questions directory and in the command line type in:
 
 ```
 node file_name.js
