@@ -30,3 +30,34 @@ const kangarooJump = (x1, v1, x2, v2) => {
 };
 
 console.log(kangarooJump(1, 3, 4, 2));
+
+// Regardless of the amount of jumps - if the kangeroos will land in the same place:
+
+const kangaroo = (x1, v1, x2, v2) => {
+  let aJumps = [];
+  let bJumps = [];
+
+  if ((x1 > x2 && v1 > v2) || (x2 > x1 && v2 > v1)) {
+    return "NO";
+  } else {
+    let kangA = x1 + v1;
+    let kangB = x2 + v2;
+
+    for (let i = 1; i < 100; i++) {
+      let ajump = kangA + v1 * i;
+      aJumps.push(ajump);
+      let bjump = kangB + v2 * i;
+      bJumps.push(bjump);
+    }
+
+    let include = aJumps.filter((element) => bJumps.includes(element));
+
+    if (include) {
+      return "YES";
+    } else {
+      return "NO";
+    }
+  }
+};
+
+console.log(kangaroo(0, 2, 5, 3));
