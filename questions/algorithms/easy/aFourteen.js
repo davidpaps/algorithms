@@ -13,18 +13,10 @@
 // E.g: [3, 1], [5, 2, 8], 10 => 9
 
 const getMoneySpent = (keyboards, drives, b) => {
-  let keySort = keyboards.sort((a, b) => {
-    return b - a;
-  });
-
-  let driveSort = drives.sort((a, b) => {
-    return b - a;
-  });
-
   let array = [];
-  for (let i = 0; i < keySort.length; i++) {
-    for (let j = 0; j < driveSort.length; j++) {
-      array.push(keySort[i] + driveSort[j]);
+  for (let i = 0; i < keyboards.length; i++) {
+    for (let j = 0; j < drives.length; j++) {
+      array.push(keyboards[i] + drives[j]);
     }
   }
 
